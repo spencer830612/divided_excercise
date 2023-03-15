@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btDivide"
+        android:layout_width="303dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/btDivide"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/lowwer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lowwer"
+        app:layout_constraintTop_toBottomOf="@+id/lowwer" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="308dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/lowwer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lowwer"
+        app:layout_constraintTop_toBottomOf="@+id/btDivide"
+        tools:text="TextView" />
+
+    <EditText
+        android:id="@+id/upper"
+        android:layout_width="308dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="@string/TextUpper"
+        android:inputType="numberSigned"
+        android:textColorHint="#989393"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lowwer"
+        android:layout_width="308dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/TextLower"
+        android:inputType="numberSigned"
+        android:textColorHint="#989393"
+        app:layout_constraintEnd_toEndOf="@+id/upper"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/upper"
+        app:layout_constraintTop_toBottomOf="@+id/upper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
