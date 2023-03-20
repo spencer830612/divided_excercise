@@ -28,6 +28,8 @@ layout_width = "mathch_parent" ：對齊最外面的。這裡指的是「螢幕�
         app:layout_constraintStart_toStartOf="@+id/upper"
         app:layout_constraintTop_toBottomOf="@+id/upper" />
 
+    <!-- 非文字大小的單位是 dp，文字的大小是用 sp-->
+
     <Button
         android:id="@+id/btDivide"
         android:layout_width="211dp"
@@ -37,10 +39,10 @@ layout_width = "mathch_parent" ：對齊最外面的。這裡指的是「螢幕�
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/lowwer"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/lowwer"
         app:layout_constraintTop_toBottomOf="@+id/lowwer" />
-    <!-- 非文字大小的單位是 dp，文字的大小是用 sp-->
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
@@ -66,5 +68,37 @@ layout_width = "mathch_parent" ：對齊最外面的。這裡指的是「螢幕�
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSeason"
+        android:layout_width="196dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="天氣描述"
+        app:layout_constraintEnd_toEndOf="@+id/textSeason"
+        app:layout_constraintStart_toStartOf="@+id/textSeason"
+        app:layout_constraintTop_toBottomOf="@+id/textSeason" />
+
+    <EditText
+        android:id="@+id/textSeason"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/TextSeason"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/ShowSeason"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textSeason"
+        app:layout_constraintStart_toStartOf="@+id/textSeason"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSeason" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

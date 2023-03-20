@@ -3,4 +3,5 @@
     <string name="TextUpper">薪水</string>
     <string name="TextLower">假期天數</string>
     <string name="btDivide"><![CDATA[請按我 <3]]></string>
+    <string name="TextSeason">請輸入季節</string>
 </resources>
