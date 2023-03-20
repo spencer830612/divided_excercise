@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 宣告 xml 的版本 -->
+<!--
+xmlns: 類似定義變數一樣。
+layout_width = "mathch_parent" ：對齊最外面的。這裡指的是「螢幕」
+-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,50 +11,14 @@
     android:layout_height="match_parent"
     android:visibility="visible"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btDivide"
-        android:layout_width="303dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/btDivide"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/lowwer"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lowwer"
-        app:layout_constraintTop_toBottomOf="@+id/lowwer" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="308dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/lowwer"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lowwer"
-        app:layout_constraintTop_toBottomOf="@+id/btDivide"
-        tools:text="TextView" />
-
+    <!-- 下面的 @+ ，代表第一次引用的物件，要用 +
+    理論上如果下面別的物件要再次使用此物件相關參數，那麼可以不用 +。不過現在似乎都會加上 + 了。-->
     <EditText
-        android:id="@+id/upper"
-        android:layout_width="308dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="@string/TextUpper"
-        android:inputType="numberSigned"
-        android:textColorHint="#989393"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
         android:id="@+id/lowwer"
-        android:layout_width="308dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/TextLower"
         android:inputType="numberSigned"
@@ -58,5 +27,44 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/upper"
         app:layout_constraintTop_toBottomOf="@+id/upper" />
+
+    <Button
+        android:id="@+id/btDivide"
+        android:layout_width="211dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/btDivide"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/lowwer"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/lowwer"
+        app:layout_constraintTop_toBottomOf="@+id/lowwer" />
+    <!-- 非文字大小的單位是 dp，文字的大小是用 sp-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/lowwer"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/lowwer"
+        app:layout_constraintTop_toBottomOf="@+id/btDivide"
+        tools:text="TextView" />
+
+    <EditText
+        android:id="@+id/upper"
+        android:layout_width="334dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/TextUpper"
+        android:inputType="numberSigned"
+        android:textColorHint="#989393"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

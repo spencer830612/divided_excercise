@@ -30,9 +30,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // 記得加
     buildFeatures {
-        viewBinding true
+        viewBinding true // 記得加
     }
+    // 記得加
 }
 
 dependencies {

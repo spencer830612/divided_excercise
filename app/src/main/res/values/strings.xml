@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="TextUpper">被除數</string>
-    <string name="TextLower">除數</string>
+    <string name="TextUpper">薪水</string>
+    <string name="TextLower">假期天數</string>
     <string name="btDivide"><![CDATA[請按我 <3]]></string>
 </resources>
